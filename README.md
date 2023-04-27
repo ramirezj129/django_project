@@ -1,4 +1,5 @@
-# Django_project - Marketplace (Note: Project will be be updated with more features until completion)
+# Django_project - Marketplace 
+<div>(Note: Project will be be updated with more features until completion)</div>
 <h3>
  <div>
 Created a Market where users are able to buy/sell/edit/delete. 
