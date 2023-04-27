@@ -1,5 +1,7 @@
-# Django_project - Marketplace
-### Created a Market where users are able to buy/sell/edit/delete. Home-Page/Dashboard/Inbox/Message/Add-Items/About/Browse/Search and with an authentication system for login/logout/register.
+# Django_project - Marketplace (Note: Project will be be updated with more features until completion)
+### Created a Market where users are able to buy/sell/edit/delete. 
+### Created Home-Page/Dashboard/Inbox/Message/Add-Items/About/Browse/Search
+### Created an authentication system for login/logout/register.
 
 <main>
 
