@@ -1,0 +1,41 @@
+{%extends "core/base.html"%}
+{% block title %} {{item.name}} {% endblock%}
+{% block content %}
+<html>
+    <body>
+<div class="container_images">
+    <div class="images_detail">
+        <img src="{{item.image.url}}" class="detailed_image" width="100%" height="100%">
+    </div>
+    <div class="details">
+        <h1 class="detail_itemname">{{item.name}}</h1>
+        <p><strong>Price: </strong> {{item.price}} </p>
+        {% if item.description %}
+        <p><strong>Description: </strong>{{item.description}} </p>
+        {% endif %}
+
+        {% if request.user == item.created_by%}
+            <div class="owner_item">
+                <p>This is your Item</p>
+                <button class="button button3"> 
+                    <a href="{% url 'edit' item.id %}"> Edit </a>
+                </button>
+                <button class="button button4">
+                   <a href="{% url 'delete' item.id %}"> Delete</a>
+                </button>
+            </div>
+        {%else%}
+        <button class="button button3">
+         <a href="{% url 'messages' item.id %}">Contact Us: </a>
+        </button>
+        {%endif%}
+        
+     </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+{% endblock%}

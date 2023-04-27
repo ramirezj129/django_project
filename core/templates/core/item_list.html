@@ -1,0 +1,48 @@
+{%extends "core/base.html"%}
+{% block content %}
+
+<div class="header_items">
+  <h2 class="new_items">Search Bar
+    <form class="search_bar" method = "get" action="{% url 'search' %}">
+      <input name= "query" type="text" value="{{query}}" placeholder="Search for an item" >
+      <button class="button5" type="submit">
+        Search
+      </button>
+    </form> 
+</h2> 
+</div>
+
+
+     <div class="grid_layout">
+        {% for item in items %}
+        <div class="images">
+            <a href="{% url 'detail' item.id %}">
+              <div>
+                <img src="{{ item.image.url }}" class="images-xl" width="240" height="195" >
+              </div>
+            </a>
+              <div>
+                 <h2 class="item_names"> {{item.name}} </h2>
+                 <p class="price_item">Price: {{item.price}} </p>
+              </div>
+        </div>
+        {%endfor%}
+
+        <footer>
+          <h2 class="cat_head_name">Categories </h2> 
+            <div class="container m-auto grid grid-cols-3 gap-2">
+              {% for category in category %}
+              <div class ="category">
+                  <a href="{%url 'item'%}?query={{query}}&category={{category.id}}">
+                    <div>
+                       <h2 class="category_names"> {{category.name}} </h2>
+                      </a>
+                       <p class="text-gray-500">{{category.items.count}} items </p>
+                    </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+          </div>
+        </footer>
+{% endblock %}

@@ -1,0 +1,27 @@
+{%extends "core/base.html"%}
+{%load crispy_forms_tags %}
+{% block content %}
+
+<form method="post" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form_div">
+        <div class = "content-section" style="justify-content: center; display: flex;">
+            <div class="col-sm-6">
+             <div class="card shadow rounded-0">
+        
+                <fieldset class="form-group form-control-sm">
+                    <legend class="border-bottom mb-4">
+                        {{page_title}}
+                    </legend>
+                    {{form | crispy }}
+                    <div class = "form-group">
+                        <button class="btn btn-outline-infro" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </fieldset>
+    </div>
+</form>
+
+{% endblock %}

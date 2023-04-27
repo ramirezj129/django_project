@@ -1,0 +1,20 @@
+{%extends "core/base.html"%}
+{%block content%}
+<html>
+  <body>
+  <div class="image_intro">
+    {%load static%} <img src="{% static "dcore/media/front-page.jpg" %}" alt ="home" width="100%">
+    <div class="intro_text">
+    <h1>Javier's Webpage</h1>
+  <p>This is my webpage Log-in for more features</p>
+  <button class="button button2"> 
+    <a class="nav-item nav-link" href="{% url 'core-about' %}">
+     Learn More
+    </a>
+  </button>
+</div>
+
+</div>
+</body>
+</html>
+{%endblock content%}

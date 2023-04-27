@@ -1,0 +1,30 @@
+{%extends "core/base.html"%}
+{% block content %}
+
+<h2 class="new_inbox text-center">Your Active Messages</h2> 
+
+<div class="grid_inbox">
+    {% for conversation in conversations %}
+    <div class="conversation_div">
+    <a href="{%url 'inbox_convo' conversation.id %}">
+        <div class="convo-image">
+            <img src="{{ conversation.item.image.url }}" width="120px" >
+        </div>
+    </a>
+
+        <div class="member_names">
+            {% for member in conversation.members.all %}
+                {% if member != request.user %}
+                <div class="topic_info"><strong>Topic:</strong> {{conversation.item.name}}</div>
+                <p class="p-member"><strong>{{member.username}} :</strong>  {{conversation.modified_at}}</p>
+                
+                {% endif %}
+
+            {% endfor %}
+          </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{%load static%}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{%static 'core/main.css'%}">
+        <title>Javier's E-Shop</title>
+    </head>
+     <body>
+          <header class="site-header">
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+              <div class="container">
+                <a 
+                class="navbar-brand mr-4"  href="{% url 'core-home' %}"> Javier's E-Shop
+                </a>
+                <div class="image">
+                  <img src="data:image/png;base64,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">                
+                  &nbsp
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                  <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="{% url 'core-home' %}">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'core-about' %}">About</a>
+                    <a class="nav-item nav-link" href="{% url 'item' %}">Shop Items</a>                  
+                  </div>
+                  <!-- Navbar Right Side -->
+                    <div class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                    <a class="nav-item nav-link" href="{% url 'inbox' %}">Inbox</a>
+                    <a class="nav-item nav-link" href="{% url 'new' %}">New Item</a>
+                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                     <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                     <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <main role="main" class="container"> 
+            {% if messages %}
+                {%for message in messages%}
+                  <div class="alert alert-{{message.tags}}">
+                    {{message}}
+                  </div>
+                {% endfor %}
+            {% endif %}
+            {% block content %}{% endblock %}
+            </main>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     </body>
+    </html>
