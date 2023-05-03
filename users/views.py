@@ -49,7 +49,7 @@ def edit(request,pk):
      if form.is_valid():
       form.save()
       messages.success(request, f"You Have Successfuly Edited This Item!")
-      return redirect("new")
+      return redirect("item")
   else:
     form = EditItemForm(instance=item)
     return render(request, 'users/form.html',{
