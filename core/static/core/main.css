@@ -43,7 +43,7 @@ body {
   }
   .button2{
     background-color: #5081dd; 
-    color: white; 
+    color: rgb(0, 0, 0); 
     border: 3px solid #5081dd;
     padding: 10px 10px;
     text-decoration: none;
@@ -132,8 +132,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  h1.intro_bg , p.intro_bg{
-    color:rgb(20, 20, 20);
+  h1.intro_bg{
+    color:black;
   }
 
   
@@ -210,7 +210,7 @@ body {
     
   }
   .conversation_msg_div{
-    display: flex;
+    display: block;
     flex-direction:column;
     text-align: center;
     background-color: #e3e3e392;
@@ -222,7 +222,9 @@ body {
     padding-bottom: 25px;
     max-width: fit-content;
     max-height: fit-content;
-    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20pt;
 
   }
   .convo_image{
