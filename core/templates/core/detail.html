@@ -17,17 +17,23 @@
         {% if request.user == item.created_by%}
             <div class="owner_item">
                 <p>This is your Item</p>
+                <a href="{% url 'edit' item.id %}">
                 <button class="button button3"> 
-                    <a href="{% url 'edit' item.id %}"> Edit </a>
+                     Edit 
                 </button>
+                </a>
+                <a href="{% url 'delete' item.id %}"> 
                 <button class="button button4">
-                   <a href="{% url 'delete' item.id %}"> Delete</a>
+                   Delete
                 </button>
+                </a>
             </div>
         {%else%}
+        <a href="{% url 'messages' item.id %}">
         <button class="button button3">
-         <a href="{% url 'messages' item.id %}">Contact Us: </a>
+         Contact Us: 
         </button>
+        </a>
         {%endif%}
         
      </div>
