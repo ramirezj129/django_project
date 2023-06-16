@@ -16,7 +16,10 @@
             {% for member in conversation.members.all %}
                 {% if member != request.user %}
                 <div class="topic_info"><strong>Topic:</strong> {{conversation.item.name}}</div>
-                <p class="p-member"><strong>{{member.username}} :</strong>  {{conversation.modified_at}}</p>
+                <strong>Created By:</strong>
+                <p class="p-member">{{member.username}}</p>
+                <strong>Modified Last:</strong>
+                <p> {{conversation.modified_at}}</p>
                 
                 {% endif %}
 
